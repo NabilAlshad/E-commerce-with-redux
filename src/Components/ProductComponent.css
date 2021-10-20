@@ -1,0 +1,42 @@
+.container {
+  padding: 2%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 80%;
+  height: 72%;
+  cursor: pointer;
+  margin-top: 200px;
+  background-color: goldenrod;
+}
+.card img {
+  width: 220px;
+  /* margin: 10px auto; */
+  height: 280px;
+  /* padding: 20px; */
+  padding: 20px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.descriptionContainer h4,
+p {
+  text-align: center;
+  padding: 10px;
+}
+.descriptionContainer h4 {
+  background-color: antiquewhite;
+  margin: 3%;
+}
+.descriptionContainer p {
+  background-color: burlywood;
+  padding: 10px;
+  margin: 10%;
+  color: rgb(24, 17, 17);
+  font-weight: bold;
+}

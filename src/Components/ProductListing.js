@@ -1,21 +1,20 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../Redux/Actions/Actions";
+import { connect, useDispatch } from "react-redux";
+import { selectedProducts, setProducts } from "../Redux/Actions/Actions";
 import ProductComponent from "./ProductComponent";
 
-const ProductListing = () => {
-  const allProducts = useSelector((state) => state);
+const ProductListing = ({ selectedProducts, setProducts, products }) => {
+  console.log(products);
   const dispatch = useDispatch();
-  console.log(allProducts);
   const fetchProducts = async () => {
     const response = await axios
       .get(`https://fakestoreapi.com/products`)
-      .catch((error) => {
-        console.log(error.message);
+      .catch((err) => {
+        console.log(err.message);
       });
-    console.log(response);
     dispatch(setProducts(response.data));
+    // console.log(response.data);
   };
   useEffect(() => {
     fetchProducts();
@@ -27,4 +26,9 @@ const ProductListing = () => {
   );
 };
 
-export default ProductListing;
+const mapStateToProps = (state) => ({
+  products: state.allProducts.products,
+});
+export default connect(mapStateToProps, { setProducts, selectedProducts })(
+  ProductListing
+);

@@ -1,0 +1,42 @@
+.productContainer {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.Thumbnail {
+  width: 50%;
+}
+.Thumbnail img {
+  width: 500px;
+  height: 80%;
+  /* margin: 10%; */
+}
+.productDescription {
+  width: 40%;
+  margin: 10% auto;
+}
+.productDescription h2 {
+  background-color: rgb(160, 223, 66);
+  color: black;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+.productDescription h6 {
+  background-color: goldenrod;
+  padding: 5%;
+  font-size: 20px;
+}
+.productDescription button {
+  background-color: aqua;
+  color: black;
+  padding: 5%;
+  border: none;
+  border-radius: 1%;
+  cursor: pointer;
+  width: 50%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
